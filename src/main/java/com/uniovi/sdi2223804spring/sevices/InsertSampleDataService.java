@@ -11,14 +11,20 @@ import com.uniovi.sdi2223804spring.entities.User;
 public class InsertSampleDataService {
     @Autowired
     private UsersService usersService;
-    /*@PostConstruct
+    @PostConstruct
     public void init() {
-        User user1 = new User("99999990A", "Pedro", "Díaz");
-        User user2 = new User("99999991B", "Lucas", "Núñez");
-        User user3 = new User("99999992C", "María", "Rodríguez");
-        User user4 = new User("99999993D", "Marta", "Almonte");
-        User user5 = new User("99999977E", "Pelayo", "Valdes");
-        User user6 = new User("99999988F", "Edward", "Núñez");
+         User user1 = new User("99999990A", "Pedro", "Díaz");
+         user1.setPassword("123456");
+         User user2 = new User("99999991B", "Lucas", "Núñez");
+         user2.setPassword("123456");
+         User user3 = new User("99999992C", "María", "Rodríguez");
+         user3.setPassword("123456");
+         User user4 = new User("99999993D", "Marta", "Almonte");
+         user4.setPassword("123456");
+         User user5 = new User("99999977E", "Pelayo", "Valdes");
+         user5.setPassword("123456");
+         User user6 = new User("99999988F", "Edward", "Núñez");
+         user6.setPassword("123456");
         Set user1Marks = new HashSet<Mark>() {
             {
                 add(new Mark("Nota A1", 10.0, user1));
@@ -60,6 +66,6 @@ public class InsertSampleDataService {
         usersService.addUser(user4);
         usersService.addUser(user5);
         usersService.addUser(user6);
-    }*/
+    }
 }
 
