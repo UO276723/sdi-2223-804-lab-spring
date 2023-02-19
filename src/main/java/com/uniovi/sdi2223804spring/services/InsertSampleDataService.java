@@ -1,4 +1,4 @@
-package com.uniovi.sdi2223804spring.sevices;
+package com.uniovi.sdi2223804spring.services;
 
 import java.util.HashSet;
 import java.util.Set;

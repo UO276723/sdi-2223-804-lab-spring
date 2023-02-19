@@ -2,8 +2,8 @@ package com.uniovi.sdi2223804spring.controllers;
 
 
 import com.uniovi.sdi2223804spring.entities.Mark;
-import com.uniovi.sdi2223804spring.sevices.MarksService;
-import com.uniovi.sdi2223804spring.sevices.UsersService;
+import com.uniovi.sdi2223804spring.services.MarksService;
+import com.uniovi.sdi2223804spring.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

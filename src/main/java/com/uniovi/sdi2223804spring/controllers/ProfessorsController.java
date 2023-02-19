@@ -1,7 +1,7 @@
 package com.uniovi.sdi2223804spring.controllers;
 
 import com.uniovi.sdi2223804spring.entities.Professor;
-import com.uniovi.sdi2223804spring.sevices.ProfessorsService;
+import com.uniovi.sdi2223804spring.services.ProfessorsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

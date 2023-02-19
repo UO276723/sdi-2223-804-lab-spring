@@ -1,13 +1,11 @@
-package com.uniovi.sdi2223804spring.sevices;
+package com.uniovi.sdi2223804spring.services;
 
 import com.uniovi.sdi2223804spring.entities.Mark;
 import com.uniovi.sdi2223804spring.repositories.MarksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 @Service

@@ -1,4 +1,4 @@
-package com.uniovi.sdi2223804spring.sevices;
+package com.uniovi.sdi2223804spring.services;
 
 import com.uniovi.sdi2223804spring.entities.Professor;
 import org.springframework.stereotype.Service;
