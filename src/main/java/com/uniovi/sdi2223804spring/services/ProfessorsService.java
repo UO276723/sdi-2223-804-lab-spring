@@ -1,9 +1,11 @@
 package com.uniovi.sdi2223804spring.services;
 
 import com.uniovi.sdi2223804spring.entities.Professor;
+import com.uniovi.sdi2223804spring.entities.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -33,6 +35,13 @@ public class ProfessorsService {
     public Professor getProfessor(Long id){
         return professors.stream()
                 .filter(professor -> professor.getId().equals(id)).findFirst().get();
+    }
+
+    public Professor getProfessorByDNI(String dni) {
+        for (Professor p : professors)
+            if (p.getDNI().equals(dni))
+                return p;
+        return null;
     }
 
     public void deleteProfessor(Long id){
