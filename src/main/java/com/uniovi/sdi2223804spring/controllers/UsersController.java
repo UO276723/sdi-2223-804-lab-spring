@@ -87,7 +87,13 @@ public class UsersController {
     }
     @RequestMapping(value = "/user/edit/{id}", method = RequestMethod.POST)
     public String setEdit(@PathVariable Long id, @ModelAttribute User user) {
-        usersService.addUser(user);
+        usersService.editUser(user);
         return "redirect:/user/details/" + id;
+    }
+
+    @RequestMapping("/user/list/update")
+    public String updateList(Model model){
+        model.addAttribute("usersList", usersService.getUsers() );
+        return "user/list :: tableUsers";
     }
 }

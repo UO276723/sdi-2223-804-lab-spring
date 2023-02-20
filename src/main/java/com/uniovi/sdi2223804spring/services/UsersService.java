@@ -30,6 +30,13 @@ public class UsersService {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         usersRepository.save(user);
     }
+    public void editUser(User user){
+        User usuarioAModificar = usersRepository.findById(user.getId()).get();
+        usuarioAModificar.setDni(user.getDni());
+        usuarioAModificar.setName(user.getName());
+        usuarioAModificar.setLastName(user.getLastName());
+        usersRepository.save(usuarioAModificar);
+    }
     public User getUserByDni(String dni) {
         return usersRepository.findByDni(dni);
     }
