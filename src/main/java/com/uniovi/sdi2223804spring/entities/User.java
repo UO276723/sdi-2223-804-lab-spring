@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Set; //Colección que no admite duplicados
 @Entity
 @Table(name = "user")
-public class User {
+public class    User {
     @Id
     @GeneratedValue
     private long id;
@@ -64,5 +64,13 @@ public class User {
     }
     public void setPasswordConfirm(String passwordConfirm) {
         this.passwordConfirm = passwordConfirm;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

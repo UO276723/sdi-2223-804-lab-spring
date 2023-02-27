@@ -1,5 +1,6 @@
 package com.uniovi.sdi2223804spring.controllers;
 
+import com.uniovi.sdi2223804spring.services.RolesService;
 import com.uniovi.sdi2223804spring.services.SecurityService;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.security.core.Authentication;
@@ -23,16 +24,21 @@ public class UsersController {
     @Autowired
     private SecurityService securityService;
 
+    @Autowired
+    private RolesService rolesService;
+
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
     public String signup(@Validated User user, BindingResult result) {
         signUpFormValidator.validate(user, result);
-        if (result.hasErrors()){
+        if (result.hasErrors()) {
             return "signup";
         }
+        user.setRole(rolesService.getRoles()[0]);
         usersService.addUser(user);
         securityService.autoLogin(user.getDni(), user.getPasswordConfirm());
         return "redirect:home";
     }
+
     @RequestMapping(value = "/signup", method = RequestMethod.GET)
     public String signup(Model model) {
         model.addAttribute("user", new User());
@@ -61,7 +67,7 @@ public class UsersController {
     }
     @RequestMapping(value = "/user/add")
     public String getUser(Model model) {
-        model.addAttribute("usersList", usersService.getUsers());
+        model.addAttribute("rolesList", rolesService.getRoles());
         return "user/add";
     }
     @RequestMapping(value = "/user/add", method = RequestMethod.POST)
