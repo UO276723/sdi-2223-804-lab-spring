@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sdi-2223-804-spring" target="17" />
+      <module name="sdi-2223-804-spring" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
