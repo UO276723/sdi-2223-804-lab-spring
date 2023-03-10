@@ -173,6 +173,7 @@ class Sdi2223804SpringApplicationTests {
         Assertions.assertEquals(checkText, result.get(0).getText());
     }
 
+    //PR12. Loguearse, comprobar que se visualizan 4 filas de notas y desconectarse usando el rol de estudiante
     @Test
     @Order(14)
     public void PR12() {
@@ -225,7 +226,7 @@ class Sdi2223804SpringApplicationTests {
         //Cmmprobamos que entramos en la pagina privada del Profesor
         PO_View.checkElementBy(driver, "text", "99999993D");
         //Pinchamos en la opción de menú de Notas: //li[contains(@id, 'marks-menu')]/a
-        List<WebElement> elements = PO_View.checkElementBy(driver, "free", "//li[contains(@id, 'marksmenu')]/a");
+        List<WebElement> elements = PO_View.checkElementBy(driver, "free", "//li[contains(@id, 'marks-menu')]/a");
         elements.get(0).click();
         //Esperamos a que aparezca la opción de añadir nota: //a[contains(@href, 'mark/add')]
         elements = PO_View.checkElementBy(driver, "free", "//a[contains(@href, 'mark/add')]");
@@ -256,7 +257,7 @@ class Sdi2223804SpringApplicationTests {
         //Comprobamos que entramos en la página privada del Profesor
         PO_View.checkElementBy(driver, "text", "99999993D");
         //Pinchamos en la opción de menú de Notas: //li[contains(@id, 'marks-menu')]/a
-        List<WebElement> elements = PO_View.checkElementBy(driver, "free", "//li[contains(@id, 'marksmenu')]/a");
+        List<WebElement> elements = PO_View.checkElementBy(driver, "free", "//li[contains(@id, 'marks-menu')]/a");
         elements.get(0).click();
         //Pinchamos en la opción de lista de notas.
         elements = PO_View.checkElementBy(driver, "free", "//a[contains(@href, 'mark/list')]");
